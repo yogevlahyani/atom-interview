@@ -34,7 +34,7 @@ print(f"Max speed: {df_clean['speed'].max():.2f} m/s ({df_clean['speed'].max() *
 print(f"Min speed: {df_clean['speed'].min():.2f} m/s ({df_clean['speed'].min() * 3.6:.2f} km/h)")
 
 # Task 1: Create and show the trajectory plot
-create_plot_trajectory(df_clean)
+# create_plot_trajectory(df_clean)
 
 # Task 2: Extract the most valuable S-second window
 best_window, metadata = extract_max_value_window(df_clean, duration_seconds=120)
@@ -58,3 +58,13 @@ best_window.to_json(
     lines=True,
     date_format="iso"
 )
+
+# Task 3 (Bonus): Pattern Recognition
+print("\n" + "="*70)
+print("Task 3 (BONUS): Pattern Recognition")
+print("="*70)
+print("\nRun 'python pattern_recognition.py' to analyze the movement pattern")
+print("This will generate:")
+print("  - Pattern classification (stop-and-go, zigzag, loop, etc.)")
+print("  - Visual plot showing trajectory and metrics")
+print("  - Detailed analysis of vehicle behavior")
